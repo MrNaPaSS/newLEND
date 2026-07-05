@@ -1,5 +1,5 @@
 setTimeout(() => {
-    AOS.init({ acnhorPlacement: "center-center", once: true, duration: 700 });
+    AOS.init({ anchorPlacement: "top-bottom", once: true, duration: 600 });
 }, 200);
 
 $(document).ready(() => {
