@@ -10,98 +10,98 @@
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Manrope-Regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Manrope-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Manrope-Medium.woff") format("woff");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Manrope-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Manrope-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Manrope-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Manrope-Bold.woff") format("woff");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Manrope-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Manrope-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Manrope-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Mont";
-  src: url("../fonts/Mont-Light.woff") format("woff");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Mont-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Manrope";
-  src: url("../fonts/Mont-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Mont-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Drukwidecyr";
-  src: url("../fonts/drukwidecyr-bold.woff") format("woff");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/drukwidecyr-bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Meddon";
-  src: url("../fonts/Meddon.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Meddon.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "SFProDisplay";
-  src: url("../fonts/SFProDisplay-Light.woff") format("woff");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/SFProDisplay-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "SFProDisplay";
-  src: url("../fonts/SFProDisplay-Bold.woff") format("woff");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+    src: url("../fonts/SFProDisplay-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
 }
 
 *,
@@ -311,6 +311,7 @@ section {
     top: 0;
     background: linear-gradient(to bottom, #000, transparent);
 }
+
 /* ===== End gradient transitions ===== */
 
 .iframe-document {
@@ -484,7 +485,7 @@ section {
     background: #000 !important;
 }
 
-.ui.selection.dropdown .menu > .item {
+.ui.selection.dropdown .menu>.item {
     padding: 1.7rem 3.3rem !important;
     font-size: 1.4rem;
     color: #fff;
@@ -1985,11 +1986,13 @@ section {
     outline: none;
 }
 
-.recommendation-section__list-item-photo.active::before, .recommendation-section__list-item-photo.active::after {
+.recommendation-section__list-item-photo.active::before,
+.recommendation-section__list-item-photo.active::after {
     opacity: 1 !important;
 }
 
-.recommendation-section__list-item-photo:hover::before, .recommendation-section__list-item-photo:hover::after {
+.recommendation-section__list-item-photo:hover::before,
+.recommendation-section__list-item-photo:hover::after {
     opacity: 1;
 }
 
@@ -2667,7 +2670,7 @@ section {
 }
 
 .about-section__box-item.item2 {
-    background-image: url(../img/about/item-bg2.png);
+    background-image: url(../img/about/item-bg2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -2678,7 +2681,7 @@ section {
 }
 
 .about-section__box-item.item3 {
-    background-image: url(../img/about/item-bg3.png);
+    background-image: url(../img/about/item-bg3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;

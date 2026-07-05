@@ -169,23 +169,23 @@ $(document).ready(() => {
     fetch('https://preformed-unadvised-slicing.ngrok-free.dev/api/pnl', {
         headers: { 'ngrok-skip-browser-warning': '1' }
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data && data.images) {
-            $(".cases__box__item__inner-case").each(function(index) {
-                if (data.images[index]) {
-                    const imgUrl = data.images[index].url;
-                    $(this).attr("href", imgUrl);
-                    $(this).find("img").attr("src", imgUrl);
-                }
-            });
-        }
-        initLightGallery();
-    })
-    .catch(err => {
-        console.error('Failed to fetch PnL screenshots:', err);
-        initLightGallery();
-    });
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.images) {
+                $(".cases__box__item__inner-case").each(function (index) {
+                    if (data.images[index]) {
+                        const imgUrl = data.images[index].url;
+                        $(this).attr("href", imgUrl);
+                        $(this).find("img").attr("src", imgUrl);
+                    }
+                });
+            }
+            initLightGallery();
+        })
+        .catch(err => {
+            console.error('Failed to fetch PnL screenshots:', err);
+            initLightGallery();
+        });
 });
 
 // ------------------------------------------------------
