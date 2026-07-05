@@ -4263,3 +4263,50 @@ section {
         padding: 0 !important;
     }
 }
+
+/* --- mobile fixes: team empty space + last-section clean flow --- */
+@media screen and (max-width: 575px) {
+    .team-section {
+        height: 54rem !important;
+    }
+
+    .last-section {
+        height: auto !important;
+        padding-bottom: 8rem;
+    }
+
+    .last-section .last__box {
+        padding-top: 16rem;
+    }
+
+    .last-section .last__box__left {
+        order: 1;
+    }
+
+    .last-section .xs {
+        order: 2;
+    }
+
+    .last-section .last__box__right {
+        order: 3;
+        margin-top: 0 !important;
+    }
+
+    .last-section .last__box__photo.photo-owner {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        width: 30rem !important;
+        margin: 1rem auto 3rem !important;
+    }
+
+    .last-section .last__box__right__form .t-btn {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+        display: flex;
+        justify-content: center;
+        margin: 3rem auto 0 !important;
+        pointer-events: auto;
+    }
+}
