@@ -2853,7 +2853,7 @@ section {
     .traffic-section__box {
         flex-direction: column;
         align-items: center;
-        gap: 11rem;
+        gap: 9rem;
         margin-top: 10.5rem;
         margin-left: 1rem;
     }
@@ -2865,8 +2865,12 @@ section {
 }
 
 @media screen and (max-width: 575px) {
+    .traffic-section__box-item:nth-child(1) {
+        margin-top: -3rem;
+    }
+
     .traffic-section__box-item:nth-child(3n) {
-        margin-top: 3.3rem;
+        margin-top: 0rem;
     }
 }
 
@@ -3475,7 +3479,7 @@ section {
 
 @media screen and (max-width: 575px) {
     .last-section .last__box__left {
-        margin-left: 4.5rem;
+        margin-left: 2.5rem;
     }
 }
 
@@ -3513,8 +3517,9 @@ section {
 
 @media screen and (max-width: 575px) {
     .last-section .last__box__left-title {
-        font-size: 4.3rem;
+        font-size: 3.9rem;
         margin-bottom: 2.5rem;
+        margin-left: -0.5rem;
     }
 }
 
@@ -4199,6 +4204,10 @@ section {
 
     .team-section .team__box.box1.solo .team__founder-info {
         align-items: center;
+    }
+
+    .team-section .team__box.box1.solo .team__founder-info .team__box__right-text {
+        margin-top: 2rem;
     }
 }
 
