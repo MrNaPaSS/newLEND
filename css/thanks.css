@@ -1,0 +1,492 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Medium.woff") format("woff");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mont";
+    src: url("../fonts/Mont-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Mont-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Drukwidecyr";
+    src: url("../fonts/drukwidecyr-bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Meddon";
+    src: url("../fonts/Meddon.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../fonts/SFProDisplay-Light.woff") format("woff");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../fonts/SFProDisplay-Bold.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 3.64vw;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: #000;
+    font-size: 1.8rem;
+    line-height: 127%;
+    font-family: "Manrope";
+    font-weight: 400;
+    margin: 0;
+}
+
+.my-body-noscroll-class {
+    overflow: hidden;
+}
+
+.my-body-noscroll-class body {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+button,
+.img-svg,
+.modal__open {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    transition: 320ms;
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: min(0.83vw, 1.48vh);
+        /* old value was 0.521vw */
+    }
+
+    /*
+    .container {
+        max-width: 123rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    */
+
+    .container {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .xs {
+        display: none;
+    }
+}
+
+.slick-slide {
+    outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+section {
+    position: relative;
+    z-index: 5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+.section__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    /* background-size: 192rem auto; */
+    background-position: center top;
+    background-size: cover;
+}
+
+/*
+@media screen and (max-width: 575px) {
+    .section__bg {
+        background-size: 44rem auto;
+    }
+}
+*/
+
+@media screen and (max-width: 575px) {
+    .section__bg.pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .section__bg.xs {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .pc {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .xs {
+        display: none;
+    }
+}
+
+.thanks-section {
+    height: 100vh;
+    background: #000;
+}
+
+@media (max-width: 575px) {
+    .logo {
+        margin-top: 3.18rem;
+    }
+
+    .svg {
+        width: 4.37rem;
+        height: 4.37rem;
+    }
+
+    .message {
+        transform: rotate(-3deg);
+        margin-top: 5.3rem;
+        display: flex;
+        flex-direction: column;
+        gap: .77rem;
+    }
+
+    .message .primary-text {
+        font-family: "Drukwidecyr";
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 90%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+    }
+
+    .message .secondary-text {
+        font-family: "Manrope";
+        font-weight: 400;
+        font-size: 0.94rem;
+        line-height: 98%;
+        text-align: center;
+        color: #afafaf;
+        width: 19rem;
+    }
+
+    .message .text-green-bold {
+        font-weight: 700;
+        color: #0c9;
+    }
+}
+
+@media (min-width: 575px) {
+    .logo {
+        margin-top: 4.56rem;
+    }
+
+    .svg {
+        width: 5.06rem;
+        height: 5.25rem;
+    }
+
+    .message {
+        transform: rotate(-3deg);
+        margin-top: 10.93rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.43rem;
+    }
+
+    .message .primary-text {
+        font-family: "Drukwidecyr";
+        font-weight: 700;
+        font-size: 7.56rem;
+        line-height: 90%;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+    }
+
+    .message .secondary-text {
+        font-family: "Manrope";
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 98%;
+        text-align: center;
+        color: #afafaf;
+    }
+
+    .message .text-green-bold {
+        font-weight: 700;
+        color: #0c9;
+    }
+}
+
+.t-btn {
+    display: block;
+    position: relative;
+    transform: scale(.76);
+    top: -12.5rem;
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn {
+        position: relative;
+        display: block;
+        transform: scale(.69);
+        top: -7.5rem;
+    }
+}
+
+.t-btn .btn__box {
+    position: relative;
+    width: 64rem;
+    height: 57rem;
+}
+
+.t-btn .btn__box {
+    position: relative;
+    transition: 420ms;
+}
+
+.t-btn .btn__box:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn .btn__box {
+        width: 27rem;
+        height: 31rem;
+    }
+}
+
+.t-btn .btn__box::before {
+    content: "";
+    width: 6.243rem;
+    height: 6.315rem;
+    background: url(../img/intro/btn-top.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 13.5rem;
+    left: 16rem;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn .btn__box::before {
+        width: 2.8rem;
+        height: 2.8rem;
+        top: 8rem;
+        left: 6rem;
+    }
+}
+
+.t-btn .btn__box::after {
+    content: "";
+    width: 6.243rem;
+    height: 6.315rem;
+    background: url(../img/intro/btn-bottom.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 13rem;
+    right: 16rem;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn .btn__box::after {
+        width: 2.8rem;
+        height: 2.8rem;
+        bottom: 7.5rem;
+        right: 6rem;
+    }
+}
+
+.t-btn .btn__box .title {
+    position: absolute;
+    left: 18rem;
+    top: 14rem;
+    width: 27.9rem;
+    height: 28.4rem;
+    font-family: "Mont";
+    padding-top: 14.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 2.872rem;
+    text-align: center;
+    color: #46411d;
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn .btn__box .title {
+        font-size: 1.6rem;
+        width: 13.7rem;
+        height: 14.4rem;
+        top: 7.3rem;
+        left: 6.5rem;
+        padding-top: 8.3rem;
+    }
+}
+
+.t-btn .btn__box .bg {
+    width: 64rem;
+    height: 57rem;
+    pointer-events: none;
+    z-index: -1;
+    position: absolute;
+}
+
+@media screen and (max-width: 575px) {
+    .t-btn .btn__box .bg {
+        width: 27rem;
+        height: 30rem;
+    }
+}
