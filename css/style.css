@@ -112,13 +112,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html,
-body {
-    max-width: 100%;
-    position: relative;
-    overflow-x: hidden;
-}
-
 html {
     font-size: 2.275vw;
 }
@@ -130,6 +123,12 @@ body {
     line-height: 127%;
     font-family: "Manrope", "Segoe UI", sans-serif;
     font-weight: 400;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .my-body-noscroll-class {
