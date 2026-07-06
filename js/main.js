@@ -157,35 +157,13 @@ $(document).ready(() => {
         });
     });
 
-    const initLightGallery = () => {
-        $(".cases__box").lightGallery({
-            thumbnail: false,
-            download: false,
-            selector: "a",
-            mode: "lg-fade",
-        });
-    };
-
-    fetch('https://preformed-unadvised-slicing.ngrok-free.dev/api/pnl', {
-        headers: { 'ngrok-skip-browser-warning': '1' }
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data && data.images) {
-                $(".cases__box__item__inner-case").each(function (index) {
-                    if (data.images[index]) {
-                        const imgUrl = data.images[index].url;
-                        $(this).attr("href", imgUrl);
-                        $(this).find("img").attr("src", imgUrl);
-                    }
-                });
-            }
-            initLightGallery();
-        })
-        .catch(err => {
-            console.error('Failed to fetch PnL screenshots:', err);
-            initLightGallery();
-        });
+    // PnL screenshots are served locally from img/cases/1..13.jpg — no external fetch needed
+    $(".cases__box").lightGallery({
+        thumbnail: false,
+        download: false,
+        selector: "a",
+        mode: "lg-fade",
+    });
 });
 
 // ------------------------------------------------------
