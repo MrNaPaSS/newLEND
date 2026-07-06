@@ -285,8 +285,8 @@ section {
     }
 
     .svg {
-        width: 4.37rem;
-        height: 4.37rem;
+        width: 12.0rem;
+        height: auto;
     }
 
     .message {
@@ -330,8 +330,8 @@ section {
     }
 
     .svg {
-        width: 5.06rem;
-        height: 5.25rem;
+        width: 16.0rem;
+        height: auto;
     }
 
     .message {
