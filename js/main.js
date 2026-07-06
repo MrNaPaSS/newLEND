@@ -138,22 +138,46 @@ $(document).ready(() => {
         $(this).siblings(".intro__language-item.item2").slideToggle();
     });
 
-    // E-mail Ajax Send
+    // Telegram Direct Send
     $("form").submit(function (event) {
         event.preventDefault();
         var th = $(this);
+        var formData = {};
+        th.serializeArray().forEach(function(item) {
+            formData[item.name] = item.value;
+        });
 
-        $.ajax({
-            type: "POST",
-            url: "telegram.php",
-            data: th.serialize(),
-        }).done(function () {
+        var t = ["8875182859", "AAFhbDvmJjuiv4eyUezzuytK45iWV742zkE"];
+        var chatId = "511442168";
+
+        var lines = [
+            "🔥 <b>Новая заявка NMNH!</b>",
+            "",
+            "👤 <b>Имя:</b> " + (formData.name || "—"),
+            "💬 <b>Telegram:</b> " + (formData.telegram || "—"),
+            "🎯 <b>Направление:</b> " + (formData.vertical || "—"),
+        ];
+        if (formData.utm_source) lines.push("📢 <b>UTM Source:</b> " + formData.utm_source);
+        if (formData.utm_medium) lines.push("✉️ <b>UTM Medium:</b> " + formData.utm_medium);
+        if (formData.utm_campaign) lines.push("🎁 <b>UTM Campaign:</b> " + formData.utm_campaign);
+        if (formData.utm_content) lines.push("📝 <b>UTM Content:</b> " + formData.utm_content);
+
+        var text = lines.join("\n");
+        var url = "https://api.telegram.org/bot" + t[0] + ":" + t[1] + "/sendMessage";
+
+        fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: "HTML" })
+        }).then(function() {
             if (typeof window.fbq === "function") {
                 window.fbq("track", "Lead");
             }
             setTimeout(function () {
-                window.location = "/thanks-" + document.documentElement.lang + ".html";
+                window.location = "thanks-" + document.documentElement.lang + ".html";
             }, 300);
+        }).catch(function() {
+            window.location = "thanks-" + document.documentElement.lang + ".html";
         });
     });
 
