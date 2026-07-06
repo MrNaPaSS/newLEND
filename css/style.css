@@ -3894,7 +3894,6 @@ section {
 }
 
 .last-section .last__box__photo.photo-owner img {
-    filter: grayscale(100%);
     width: 100%;
 }
 
@@ -4161,9 +4160,8 @@ section {
 }
 
 .team-section .team__box.box1.solo .team__founder-photo img {
-    height: 48rem;
+    height: 62rem;
     width: auto;
-    filter: grayscale(100%) drop-shadow(0 1rem 4rem rgba(0, 204, 153, 0.35));
 }
 
 .team-section .team__box.box1.solo .team__founder-info {
@@ -4196,7 +4194,7 @@ section {
     }
 
     .team-section .team__box.box1.solo .team__founder-photo img {
-        height: 34rem;
+        height: 44rem;
     }
 
     .team-section .team__box.box1.solo .team__founder-info {
