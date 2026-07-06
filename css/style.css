@@ -2870,7 +2870,7 @@ section {
     }
 
     .traffic-section__box-item:nth-child(3n) {
-        margin-top: 0rem;
+        margin-top: 1.5rem;
     }
 }
 
