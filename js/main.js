@@ -171,7 +171,7 @@ $(document).ready(() => {
             body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: "HTML" })
         }).then(function() {
             if (typeof window.fbq === "function") {
-                window.fbq("track", "Lead");
+                window.fbq("track", "SubmitApplication");
             }
             setTimeout(function () {
                 window.location = "thanks-" + document.documentElement.lang + ".html";
