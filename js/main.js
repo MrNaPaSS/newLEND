@@ -147,6 +147,9 @@ $(document).ready(() => {
             formData[item.name] = item.value;
         });
 
+        // Пиксель: событие заявки шлём сразу на submit, независимо от отправки в Telegram
+        if (typeof window.fbq === "function") { window.fbq("track", "SubmitApplication"); }
+
         var t = ["8875182859", "AAFhbDvmJjuiv4eyUezzuytK45iWV742zkE"];
         var chatId = "511442168";
 
@@ -170,9 +173,6 @@ $(document).ready(() => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: "HTML" })
         }).then(function() {
-            if (typeof window.fbq === "function") {
-                window.fbq("track", "SubmitApplication");
-            }
             setTimeout(function () {
                 window.location = "thanks-" + document.documentElement.lang + ".html";
             }, 300);
